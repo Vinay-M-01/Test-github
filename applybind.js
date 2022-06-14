@@ -47,3 +47,4 @@ let divide = function(x)
 }
 let divideByTwo = divide(2);
 divideByTwo(6);
+
