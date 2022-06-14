@@ -1,3 +1,5 @@
+// Call, Apply and Bind 
+
 var obj = {num1:10, num2:20}
 
 var addThese = function(a,b){
@@ -25,3 +27,23 @@ var studentage = function(){
 
 var agestud = studentage.bind(Student)
 agestud();
+
+
+// Using bind and Currying 
+
+let multiply = function(a, b)
+{
+    console.log(a*b);
+}
+let multiplyByTwo = multiply.bind(this , 2);
+multiplyByTwo(5);
+
+let divide = function(x)
+{
+    return function(y)
+    {
+        console.log(y/x);
+    }
+}
+let divideByTwo = divide(2);
+divideByTwo(6);
