@@ -17,7 +17,6 @@ console.log(addThese.apply(obj, arr));
 var bound = addThese.bind(obj);
 console.log(bound(30,10));
 
-
 //Student Age 
 var Student = {age:20}
 
@@ -27,7 +26,6 @@ var studentage = function(){
 
 var agestud = studentage.bind(Student)
 agestud();
-
 
 // Using bind and Currying 
 
@@ -47,4 +45,45 @@ let divide = function(x)
 }
 let divideByTwo = divide(2);
 divideByTwo(6);
+
+//  Advance Closures
+
+const name1 = (arr1)=>{
+    var count =0
+    return () =>{
+        console.log(`Hello ${arr1[count]}`)
+        count++
+    }
+}
+
+let fun = name1(["Ram","Shyam"]);
+
+fun();// Print Hello Ram
+
+fun();//print Hello Shyam
+
+
+// All About Functions 
+a()
+function a(){
+    console.log('inside a');
+}
+var b = function (){
+    console.log('inside b');
+}
+b()
+
+//Function Declaration 
+function aa (){
+    console.log("Example for function declaration");
+}
+aa()
+
+// Function Expression 
+var b1 = function (){
+    console.log('Example for fucntion expression');
+}
+b1()
+
+
 
